@@ -40,7 +40,8 @@ popd
 git clone https://github.com/chenhw2/luci-app-aliddns.git  package/diy/luci-app-aliddns
 
 #openwrt-v2ray
-#git clone https://github.com/kuoruan/openwrt-v2ray.git package/diy/openwrt-v2ray
+git clone https://github.com/kuoruan/openwrt-v2ray.git package/diy/openwrt-v2ray
+git clone https://github.com/kuoruan/openwrt-upx.git package/diy/openwrt-upx
 
 #luci-app-v2ray
-#git clone -b luci2 https://github.com/kuoruan/luci-app-v2ray.git package/diy/luci-app-v2ray
+git clone -b luci2 https://github.com/kuoruan/luci-app-v2ray.git package/diy/luci-app-v2ray
