@@ -11,7 +11,8 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.99.2/g' package/base-files/files/bin/config_generate
+sed -i 's/UTC/Asia\/Shanghai/g' package/base-files/files/bin/config_generate
 
 # Modify default DNS
 sed -i '/network.$1.netmask'/a"\\ \t\ \t\ \t\ \tset network.\$1.dns='127.0.0.1 223.5.5.5 8.8.8.8'"  package/base-files/files/bin/config_generate
@@ -27,17 +28,11 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git  package/diy/luci-th
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/diy/luci-app-argon-config
 
 # openclash
-wget -P package/diy/openclash -c https://github.com/vernesong/OpenClash/archive/refs/heads/master.zip
-unzip -o package/diy/openclash/master.zip  -d package/diy/openclash/
-
-# 编译 po2lmo
-pushd package/diy/openclash/OpenClash-master/luci-app-openclash/tools/po2lmo
-make && sudo make install
-popd
-# cd $GITHUB_WORKSPACE/openwrt
+#wget -P package/diy/openclash -c https://github.com/vernesong/OpenClash/archive/refs/heads/master.zip
+#unzip -o package/diy/openclash/master.zip  -d package/diy/openclash/
 
 # luci-app-aliddns
-git clone https://github.com/chenhw2/luci-app-aliddns.git  package/diy/luci-app-aliddns
+#git clone https://github.com/chenhw2/luci-app-aliddns.git  package/diy/luci-app-aliddns
 
 #openwrt-v2ray
 git clone https://github.com/kuoruan/openwrt-v2ray.git package/diy/openwrt-v2ray
@@ -45,3 +40,13 @@ git clone https://github.com/kuoruan/openwrt-upx.git package/diy/openwrt-upx
 
 #luci-app-v2ray
 git clone -b luci2 https://github.com/kuoruan/luci-app-v2ray.git package/diy/luci-app-v2ray
+
+
+git clone https://github.com/kenzok8/openwrt-packages package/diy/kenzok8/openwrt-packages
+git clone https://github.com/kenzok8/small package/diy/kenzok8/small
+
+# 编译 po2lmo
+#pushd package/diy/openclash/OpenClash-master/luci-app-openclash/tools/po2lmo
+#make && sudo make install
+#popd
+# cd $GITHUB_WORKSPACE/openwrt
