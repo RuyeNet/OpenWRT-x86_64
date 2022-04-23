@@ -53,3 +53,7 @@ git clone https://github.com/kenzok8/small package/diy/kenzok8/small
 
 # openwrt-r8168
 git clone https://github.com/RuyeNet/openwrt-r8168 package/diy/openwrt-r8168
+
+# fix golang
+rm -rf feeds/packages/lang/golang/
+git clone https://github.com/RuyeNet/openwrt-golang feeds/packages/lang/golang
