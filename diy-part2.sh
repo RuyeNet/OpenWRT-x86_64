@@ -12,7 +12,7 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.99.2/g' package/base-files/files/bin/config_generate
-sed -i 's/UTC/Asia\/Shanghai/g' package/base-files/files/bin/config_generate
+sed -i 's/UTC/UTC\-8/g' package/base-files/files/bin/config_generate
 
 # Modify default DNS
 sed -i '/network.$1.netmask'/a"\\ \t\ \t\ \t\ \tset network.\$1.dns='127.0.0.1 223.5.5.5 8.8.8.8'"  package/base-files/files/bin/config_generate
