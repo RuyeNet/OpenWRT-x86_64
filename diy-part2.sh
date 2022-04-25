@@ -59,6 +59,5 @@ git clone https://github.com/RuyeNet/openwrt-r8168 package/diy/openwrt-r8168
 #git clone https://github.com/RuyeNet/openwrt-golang feeds/packages/lang/golang
 
 # passwall
-https://github.com/xiaorouji/openwrt-passwall.git
-git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/diy/passwall/luci
-git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/diy/passwall/packages
+#git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/diy/passwall/luci
+#git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/diy/passwall/packages
