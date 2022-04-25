@@ -57,6 +57,13 @@ git clone https://github.com/RuyeNet/openwrt-r8168 package/diy/openwrt-r8168
 # fix golang
 #rm -rf feeds/packages/lang/golang/
 #git clone https://github.com/RuyeNet/openwrt-golang feeds/packages/lang/golang
+mkdir temp
+mv feeds/packages/lang/golang/ temp/
+git clone https://github.com/openwrt/packages.git temp/packages
+cd temp/packages/
+git reset --hard 9704e900
+cd $GITHUB_WORKSPACE/openwrt
+cp -r temp/packages/lang/golang/ feeds/packages/lang/golang
 
 # passwall
 #git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/diy/passwall/luci
