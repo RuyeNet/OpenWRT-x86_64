@@ -68,3 +68,7 @@ cp -r temp/packages/lang/golang/ feeds/packages/lang/golang
 # passwall
 #git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/diy/passwall/luci
 #git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/diy/passwall/packages
+
+# kms
+git clone https://github.com/mchome/openwrt-vlmcsd.git packages/diy/openwrt-vlmcsd
+git clone https://github.com/mchome/luci-app-vlmcsd.git packages/diy/luci-app-vlmcsd
