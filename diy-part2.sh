@@ -28,11 +28,11 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git  package/diy/luci-th
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/diy/luci-app-argon-config
 
 # openclash
-#wget -P package/diy/openclash -c https://github.com/vernesong/OpenClash/archive/refs/heads/master.zip
-#unzip -o package/diy/openclash/master.zip  -d package/diy/openclash/
+wget -P package/diy/openclash -c https://github.com/vernesong/OpenClash/archive/refs/heads/master.zip
+unzip -o package/diy/openclash/master.zip  -d package/diy/openclash/
 
 # luci-app-aliddns
-#git clone https://github.com/chenhw2/luci-app-aliddns.git  package/diy/luci-app-aliddns
+git clone https://github.com/chenhw2/luci-app-aliddns.git  package/diy/luci-app-aliddns
 
 #openwrt-v2ray
 git clone https://github.com/kuoruan/openwrt-v2ray.git package/diy/openwrt-v2ray
@@ -41,14 +41,13 @@ git clone https://github.com/kuoruan/openwrt-upx.git package/diy/openwrt-upx
 #luci-app-v2ray
 git clone -b luci2 https://github.com/kuoruan/luci-app-v2ray.git package/diy/luci-app-v2ray
 
-
-git clone https://github.com/kenzok8/openwrt-packages package/diy/kenzok8/openwrt-packages
-git clone https://github.com/kenzok8/small package/diy/kenzok8/small
+#git clone https://github.com/kenzok8/openwrt-packages package/diy/kenzok8/openwrt-packages
+#git clone https://github.com/kenzok8/small package/diy/kenzok8/small
 
 # 编译 po2lmo
-#pushd package/diy/openclash/OpenClash-master/luci-app-openclash/tools/po2lmo
-#make && sudo make install
-#popd
+pushd package/diy/openclash/OpenClash-master/luci-app-openclash/tools/po2lmo
+make && sudo make install
+popd
 # cd $GITHUB_WORKSPACE/openwrt
 
 # openwrt-r8168
@@ -72,3 +71,10 @@ cp -r temp/packages/lang/golang/ feeds/packages/lang/golang
 # kms
 git clone https://github.com/mchome/openwrt-vlmcsd.git packages/diy/openwrt-vlmcsd
 git clone https://github.com/mchome/luci-app-vlmcsd.git packages/diy/luci-app-vlmcsd
+
+# luci-app-adguardhome
+git clone https://github.com/AdguardTeam/AdGuardHome.git package/diy/adguardhome
+git clone https://github.com/kongfl888/luci-app-adguardhome.git package/diy/luci-app-adguardhome
+
+# luci-app-poweroff
+git clone https://github.com/esirplayground/luci-app-poweroff.git package/diy/luci-app-poweroff
