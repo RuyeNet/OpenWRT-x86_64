@@ -61,7 +61,8 @@ mv feeds/packages/lang/golang/ temp/
 git clone https://github.com/openwrt/packages.git temp/packages
 cd temp/packages/
 git reset --hard 9704e900
-cd $GITHUB_WORKSPACE/openwrt
+#cd $GITHUB_WORKSPACE/openwrt
+cd ../..
 cp -r temp/packages/lang/golang/ feeds/packages/lang/golang
 
 # passwall
@@ -69,8 +70,8 @@ cp -r temp/packages/lang/golang/ feeds/packages/lang/golang
 #git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/diy/passwall/packages
 
 # kms
-git clone https://github.com/mchome/openwrt-vlmcsd.git packages/diy/openwrt-vlmcsd
-git clone https://github.com/mchome/luci-app-vlmcsd.git packages/diy/luci-app-vlmcsd
+git clone https://github.com/mchome/openwrt-vlmcsd.git package/diy/openwrt-vlmcsd
+git clone https://github.com/mchome/luci-app-vlmcsd.git package/diy/luci-app-vlmcsd
 
 # luci-app-adguardhome
 git clone https://github.com/AdguardTeam/AdGuardHome.git package/diy/adguardhome
